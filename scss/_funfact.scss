@@ -1,0 +1,36 @@
+/*** 
+
+====================================================================
+funfact-section
+====================================================================
+
+***/
+
+.funfact-block {
+	.inner-block {
+		position: relative;
+		text-align: center;
+		@include media-breakpoint-down(md){
+			margin-bottom: 30px;
+		}
+		&:before {
+			background-color: #dad9d9;
+			content: "";
+			height: 90px;
+			position: absolute;
+			right: -23px;
+			width: 1px;
+			top: 10%;
+			@include media-breakpoint-down(xl){
+				display: none;
+			}
+		}
+		.counter-box {
+			.count-box {
+				position: relative;
+				margin-bottom: 3px;
+				color: var(--theme-color1);
+			}
+		}
+	}
+}

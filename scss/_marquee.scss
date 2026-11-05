@@ -1,0 +1,78 @@
+
+/***
+
+====================================================================
+    Marquee Section
+====================================================================
+
+***/
+
+.marquee-section {
+  position: relative;
+  .marquee {
+    position: relative;
+    display: flex;
+    user-select: none;
+    gap: 0;
+    animation: scroll 15s linear infinite;
+    &.two {
+      animation: scroll-reverse 15s linear infinite;
+      .marquee-group {
+        animation: scroll-reverse 15s linear infinite;
+        background-color: var(--theme-color1);
+        .text {
+          color: var(--theme-color-white);
+        }
+      }
+    }
+  }
+  .marquee-group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0;
+    min-width: 100%;
+    animation: scroll 15s linear infinite;
+    user-select: none;
+    padding: 2.5px 0;
+    background-color: var(--bg-color);
+    .text {
+      position: relative;
+      font-size: 50px;
+      font-weight: 400;
+      font-family: var(--heading-font-family);
+      color: var(--headings-color);
+      padding: 0 30px;
+      text-transform: capitalize;
+      @include media-breakpoint-down(md){
+        font-size: 40px;
+      }
+      &.divider {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-repeat: no-repeat;
+          background-position: center;
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

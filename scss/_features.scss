@@ -1,0 +1,175 @@
+/*** 
+
+====================================================================
+    Feature Block
+====================================================================
+
+***/
+
+.features-block {
+  position: relative;
+  @include media-breakpoint-down(xl){
+    margin-bottom: 20px;
+  }
+  .inner {
+    position: relative;
+    padding: 35px 35px 25px;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: var(--theme-color-white);
+    z-index: 1;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    &:before {
+      position: absolute;
+      content: "";
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      opacity: 0;
+      z-index: -1;
+      background-color: rgb(238, 245, 243);
+      transform: scale(0.2, 1);
+      @include transition(all 500ms ease);
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+      .shape {
+        opacity: 1;
+        visibility: visible;
+      }
+      .icon {
+        transform: rotateY(180deg);
+        color: var(--theme-color-white);
+        background-color: var(--theme-color1);
+      }
+      .btn-view-details {
+        .btn-plain-text-with-arrow-right {
+          color: var(--theme-color2) !important;
+          &:after {
+            color: var(--theme-color2) !important;
+          }
+        }
+      }
+    }
+    .icon {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      font-size: 44px;
+      line-height: 94px;
+      text-align: center;
+      border-radius: 10px;
+      color: var(--theme-color1);
+      background-color: #f3f3f4;
+      font-family: "flaticon-finance";
+      @include transition(all 500ms ease);
+    }
+    .shape {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      opacity: 1;
+      visibility: visible;
+      transition: all 300ms ease;
+      background: url(../images/icons/shape-3.png);
+      height: 269px;
+      width: 186px;
+    }
+  }
+  .features-title {
+    margin-top: 35px;
+    margin-bottom: 0;
+    a {
+      color: var(--theme-color1);
+    }
+  }
+  .features-details {
+    position: relative;
+    color: #4e595d;
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+  .btn-view-details {
+    transition: all 300ms ease;
+    margin-top: 18px;
+    &:hover {
+      .btn-plain-text-with-arrow-right {
+        color: var(--theme-color2) !important;
+        &:after {
+          color: var(--theme-color2) !important;
+        }
+      }
+    }
+    .btn-plain-text-with-arrow-right {
+      position: relative;
+      font-weight: 400 !important;
+      font-size: 14px !important;
+      &::after {
+        font-family: "FlaticonCommon" !important;
+        content: "\f118";
+        color: #222;
+      }
+    }
+  }
+}
+[data-tm-layout=dark] {
+  .features-block {
+    .inner {
+      &:hover {
+        .icon {
+          color: var(--theme-color1);
+        }
+        .btn-view-details {
+          .btn-plain-text-with-arrow-right {
+            color: var(--theme-color2) !important;
+            &:after {
+              color: var(--theme-color2) !important;
+            }
+          }
+        }
+      }
+      .icon {
+        background-color: #1d1d1d;
+      }
+    }
+    .btn-view-details {
+      &:hover {
+        .btn-plain-text-with-arrow-right {
+          color: var(--theme-color2) !important;
+          &:after {
+            color: var(--theme-color2) !important;
+          }
+        }
+      }
+      .btn-plain-text-with-arrow-right {
+        color: #a1a1a1 !important;
+        &::after {
+          color: #a1a1a1 !important;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1399.98px) {
+  .features-block {
+    .inner {
+      padding: 35px 20px 25px;
+    }
+    .features-title {
+      font-size: 20px;
+    }
+  }
+}
+@media (max-width: 575.98px) {
+  .features-block {
+    .inner {
+      padding: 25px 25px;
+    }
+  }
+}

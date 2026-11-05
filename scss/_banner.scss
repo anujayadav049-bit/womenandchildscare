@@ -1,0 +1,273 @@
+/*** 
+
+====================================================================
+    Banner Section One
+====================================================================
+
+***/
+
+.banner-section {
+  position: relative;
+  padding: 20px 15px 0;
+  .outer-box {
+    position: relative;
+    padding: 370px 0 0;
+    border-radius: 20px;
+    max-width: 1880px;
+    margin: 0 auto;
+    @include media-breakpoint-down(xl){
+      padding: 250px 0 0;
+    }
+    @include media-breakpoint-down(md){
+      padding: 200px 0 0;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      background-image: linear-gradient(264deg, #00000026 4%, #005252 82%);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 20px;
+      z-index: 1;
+    }
+    .bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      z-index: 0;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation: growInfinite 100s linear infinite;
+      }
+    }
+    .feature-box {
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid rgba(var(--theme-color-white-rgb), .17);
+      .feature {
+        position: relative;
+        border-right: 1px solid rgba(var(--theme-color-white-rgb), .17);
+        @include media-breakpoint-down(md){
+          border-right: none;
+        }
+        .inner {
+          position: relative;
+          padding: 30px 0;
+          text-align: center;
+          @include media-breakpoint-down(md){
+            padding: 25px 0;
+          }
+        }
+        &:last-child {
+          border-right: none;
+          .inner {
+            @include media-breakpoint-down(md){
+              padding-bottom: 30px;
+            }
+          }
+        }
+        span {
+          color: var(--theme-color-white);
+          display: block;
+        }
+        .call {
+          text-decoration: underline;
+        }
+      }
+    }
+    .banner-content {
+      position: relative;
+      max-width: 1760px;
+      margin: 0 auto;
+      padding: 0 15px;
+      .inner-content {
+        position: relative;
+        z-index: 2;
+        max-width: 1100px;
+        padding-bottom: 135px;
+        @include media-breakpoint-down(xl){
+          padding-bottom: 120px;
+        }
+        @include media-breakpoint-down(lg){
+          text-align: center;
+        }
+        .sub-title {
+          position: relative;
+          margin-bottom: 10px;
+          .rating {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 0;
+            margin-right: 15px;
+            @include media-breakpoint-down(sm){
+              display: block;
+            }
+            i {
+              font-size: 15px;
+              color: #f0ad4e;
+              line-height: 1;
+            }
+          }
+          span {
+            color: var(--theme-color-white);
+          }
+        }
+        .banner-title {
+          position: relative;
+          font-family: var(--style-font-family);
+          color: var(--theme-color-white);
+          margin-bottom: 18px;
+          @include responsive-font(40px, 5vw, 80px, 1.125);
+          @media (max-width: 1399.98px){
+            max-width: 80%;
+          }
+          @media (max-width: 1299.98px){
+            max-width: 70%;
+          }
+          @include media-breakpoint-down(lg){
+            max-width: none;
+          }
+        }
+        .text {
+          position: relative;
+          color: var(--theme-color-white);
+        }
+      }
+    }
+  }
+}
+
+/*** 
+
+====================================================================
+    banner-section-two
+====================================================================
+
+***/
+
+.banner-section-two {
+  position: relative;
+  padding: 0 15px;
+  .outer-box {
+    position: relative;
+    border-radius: 30px;
+    max-width: 1840px;
+    margin: 0 auto;
+    padding: 120px 0;
+    &:before {
+      position: absolute;
+      content: "";
+      background-image: linear-gradient(270deg, #00000012 40%, #F8F8F880 100%);
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    @include media-breakpoint-down(lg){
+      padding: 80px 0;
+    }
+    .bg-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 30px;
+      z-index: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        object-fit: cover;
+      }
+    }
+    .banner-content {
+      position: relative;
+      max-width: 1630px;
+      padding: 0 15px;
+      margin: 0 auto;
+      z-index: 3;
+      .inner-content {
+        position: relative;
+        max-width: 752px;
+        padding: 50px 60px 58px;
+        border-radius:  20px;
+        background-color: rgba(var(--theme-color-white-rgb), .5);
+        border: 1px solid var(--theme-color-white);
+        @include media-breakpoint-down(lg){
+          max-width: 100%;
+          text-align: center;
+          padding: 50px 15px;
+        }
+        .banner-title {
+          position: relative;
+          margin-bottom: 30px;
+          @include responsive-font(32px, 5vw, 64px, 1.2);
+        }
+        .text {
+          position: relative;
+          color: #444444;
+          font-size: 20px;
+          line-height: 30px;
+          margin: 0 0 40px;
+        }
+        .feature-box {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          margin-top: 45px;
+          @include media-breakpoint-down(lg){
+            justify-content: center;
+          }
+          @include media-breakpoint-down(md){
+            display: none;
+            padding: 30px;
+          }
+          .feature {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            &:hover {
+              .icon {
+                transform: rotateY(-180deg);
+              }
+            }
+            .icon {
+              @include transition(all 300ms ease);
+              svg {
+                font-size: 36px;
+              }
+            }
+            .title {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@keyframes growInfinite {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2);
+  }
+}

@@ -1,0 +1,75 @@
+/*** 
+
+====================================================================
+Section Title
+====================================================================
+
+***/
+
+.sec-title {
+  position: relative;
+  &.light {
+    .sub-title {
+      background-color: rgba(var(--theme-color-white-rgb), .1);
+      &.border-style {
+        border: 1px solid #FFFFFF47;
+      }
+      &:before {
+        background-color: var(--theme-color-white);
+      }
+    }
+    .sub-title , .title {
+      color: var(--theme-color-white);
+    }
+  }
+  .sub-title {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    color: var(--sec-title-subtitle-color);
+    font-size: var(--sec-title-subtitle-font-size);
+    line-height: var(--sec-title-subtitle-line-height);
+    font-family: var(--sec-title-subtitle-font-family);
+    font-weight: var(--sec-title-subtitle-font-weight);
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+    background-color: var(--theme-color-white);
+    border-radius: 50px;
+    padding: 9px 19px 4px 36px;
+    @include transition(all 400ms ease);
+    &.border-style {
+      border: 1px solid #1212121A;
+    }
+    &.style-two {
+      border: 1px solid #1212121A;
+      background-color: transparent;
+    }
+    &:before {
+      position: absolute;
+      left: 18px;
+      top: calc(50% - 4px);
+      background-color: var(--theme-color1);
+      border-radius: 50%;
+      content: "";
+      display: inline-block;
+      height: 8px;
+      margin-right: 10px;
+      width: 8px;
+    }
+  }
+  .title {
+    position: relative;
+    font-size: var(--sec-title-font-size);
+    font-weight: var(--sec-title-font-weight);
+    font-family: var(--sec-title-font-family);
+    color: var(--sec-title-color);
+    line-height: var(--sec-title-title-line-height);
+    margin: 0;
+    @include responsive-font(30px, 4vw, 50px, 1.2);
+    @include media-breakpoint-down(xxl){
+      br {
+        display: none;
+      }
+    }
+  }
+}

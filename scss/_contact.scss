@@ -1,0 +1,294 @@
+/*** 
+
+====================================================================
+   contact-section
+====================================================================
+
+***/
+
+.contact-section {
+  position: relative;
+  margin: 0 15px;
+  .outer-container {
+    position: relative; 
+    max-width: 1840px;
+    margin: 0 auto;
+    .image-column {
+      .inner-column {
+        position: relative;
+        border-radius: 20px;
+        height: 100%;
+        overflow: hidden;
+        @include media-breakpoint-down(sm){
+          min-height: 450px;
+        }
+        &:before {
+          position: absolute;
+          content: "";
+          background-image: linear-gradient(180deg, #1A413700 20%, #005252 90%);
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          border-radius: 20px;
+          z-index: 1;  
+        }
+        .image {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+          z-index: 0;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+          }
+        }
+        .content {
+          position: absolute;
+          bottom: 60px;
+          left: 80px;
+          z-index: 2;
+          width: 100%;
+          max-width: 700px;
+          @include media-breakpoint-down(xl){
+            bottom: 40px;
+            left: 20px;
+          }
+          @include media-breakpoint-down(xl){
+            width: calc(100% - 40px);
+            left: 20px;
+            right: 20px;
+          }
+          .title {
+            position: relative;
+            color: var(--theme-color-white);
+            margin-bottom: 40px;
+          }
+          .info {
+            position: relative;
+            span , .info-title {
+              position: relative;
+              color: var(--theme-color-white);
+            }
+            .info-title {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+    .content-column {
+      .inner-column {
+        position: relative;
+        border-radius: 20px;
+        background-color: var(--theme-color1);
+        padding: 100px;
+        @include media-breakpoint-down(xxl){
+          padding: 100px 30px;
+        }
+        @include media-breakpoint-down(lg){
+          padding: 80px 20px;
+        }
+        .bg-image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 20px;
+          opacity: 0.02;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+          }
+        }
+        .form-box {
+          .inner-box {
+            position: relative;
+            .theme-btn {
+              width: 100%;
+              padding: 11px 30px;
+              background-color: var(--theme-color3);
+              color: var(--theme-color3-text-color);
+              border-radius: 15px;
+              margin-top: 4px;
+            }
+            .form-clt {
+              position: relative;
+              width: 100%;
+              input ,
+              textarea {
+                position: relative;
+                width: 100%;
+                background-color: transparent;
+                padding-bottom: 15px;
+                margin-bottom: 16px;
+                border-bottom: 1px solid #FFFFFF1A;
+                color: var(--theme-color-white);
+                @include transition(all 300ms ease);
+                &:focus {
+                  border-color: var(--theme-color-white);
+                }
+                &::placeholder {
+                  color: var(--theme-color-white);
+                }
+              }
+              textarea {
+                height: 126px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*** 
+
+====================================================================
+   contact-section-two
+====================================================================
+
+***/
+
+.contact-section-two {
+  position: relative;
+  .shape-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .shape-2 {
+    position: absolute;
+    left: 0;
+    bottom: -160px;
+  }
+  .content-column {
+    .inner-column {
+      position: relative;
+      max-width: 500px;
+      @include media-breakpoint-down(xl){
+        max-width: 100%;
+      }
+      @include media-breakpoint-down(lg){
+        margin-bottom: 40px;
+      }
+      .sec-title {
+        .title {
+          margin-bottom: 30px;
+          @include media-breakpoint-down(md){
+            margin-bottom: 20px;
+          }
+        }
+        .text {
+          margin-bottom: 40px;
+          @include media-breakpoint-down(md){
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .info-box {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-right: -16px;
+        @include media-breakpoint-down(xl){
+          margin-right: 0;
+        }
+        @include media-breakpoint-down(sm){
+          flex-direction: column;
+          align-items: start;
+        }
+        .info {
+          position: relative;
+          padding: 10px 20px 15px 30px;
+          background-color: #F5F5F5;
+          border-radius: 14px 14px 14px 14px;
+          border-style: solid;
+          border-width: 1px 1px 1px 1px;
+          border-color: #1A237E1A;
+          width: 50%;
+          @include media-breakpoint-down(xl){
+            padding: 10px 15px 15px;
+          }
+          @include media-breakpoint-down(sm){
+            width: 100%;
+          }
+          &:hover {
+            .sub-title {
+              i {
+                transform: rotateY(-180deg);
+              }
+            }
+          }
+          .sub-title {
+            position: relative;
+            color: #0A192F;
+            i {
+              font-weight: 400;
+              margin-right: 7px;
+              @include transition(all 300ms ease);
+            }
+          }
+          .title {
+            position: relative;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .form-column {
+    .inner-column {
+      position: relative;
+      padding-left: 9px;
+      @include media-breakpoint-down(lg){
+        padding-left: 0;
+      }
+      .form-box {
+        .inner-box {
+          position: relative;
+          .form-clt {
+            position: relative;
+            width: 100%;
+            margin-bottom: 15px;
+            textarea {
+              height: 121px !important;
+            }
+            input ,
+            select ,
+            textarea {
+              position: relative;
+              width: 100%;
+              background-color: var(--bg-color);
+              border: 1px solid #1A237E1A;
+              border-radius: 20px;
+              height: 60.8px;
+              padding: 14px 20px;
+              @include transition(all 300ms ease);
+              &:focus {
+                border-color: var(--theme-color1);
+              }
+            }
+          }
+          .theme-btn {
+            border-radius: 60px;
+            padding: 1.26rem 3.2rem;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.7px;
+            text-transform: uppercase;
+            background-color: var(--theme-color3);
+            color: var(--theme-color3-text-color);
+          }
+        }
+      }
+    }
+  }
+}
+
